@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/skku-table-backend.iml" filepath="$PROJECT_DIR$/.idea/skku-table-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skkuTable.main.iml" filepath="$PROJECT_DIR$/.idea/modules/skkuTable.main.iml" />
     </modules>
   </component>
 </project>
