@@ -1,24 +1,11 @@
 services:
-  web:
+  reverse-proxy:
     container_name: nginx
     image: nginx
     ports:
       - 80:80
     volumes:
       - skku-table-nginx:/etc/nginx
-    depends_on:
-      - application
-  application:
-    container_name: spring
-    build:
-      context: .
-      dockerfile: .devcontainer/Dockerfile
-    volumes:
-      - .:/workspace:cached
-    ports:
-      - 8080:8080
-    depends_on:
-      - database
   database:
     container_name: mysql
     image: mysql
