@@ -1,4 +1,4 @@
-package com.skkutable;  // 적절한 패키지 경로로 설정
+package com.skkutable.config;  // 적절한 패키지 경로로 설정
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -10,8 +10,10 @@ public class WebConfig implements WebMvcConfigurer {
   @Override
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
-        .allowedOrigins("http://localhost:3000")  // Next.js 주소
+        .allowedOrigins("*")
         .allowedMethods("GET", "POST", "PUT", "DELETE")
-        .allowedHeaders("*");
+        .allowedHeaders("Authorization", "Content-Type")
+        .exposedHeaders("*")
+        .maxAge(3600);
   }
 }
