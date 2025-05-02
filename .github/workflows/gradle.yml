@@ -55,7 +55,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no ubuntu@stage.skkutable.com "mkdir -p ~/skku-table-backend/build/libs"
 
           # scp 명령어로 JAR 파일을 서버에 전송
-          scp -o StrictHostKeyChecking=no ./spring-boot-jar/skku-table-backend.jar ubuntu@stage.skkutable.com:~/skku-table-backend/build/libs/skku-table-backend.jar
+          scp -o StrictHostKeyChecking=no skku-table-backend.jar ubuntu@stage.skkutable.com:~/skku-table-backend/build/libs/skku-table-backend.jar
 
           # Docker Compose로 애플리케이션 실행
           ssh -o StrictHostKeyChecking=no ubuntu@stage.skkutable.com "cd ~/skku-table-backend && docker compose pull && docker compose up -d"
