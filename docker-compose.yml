@@ -1,11 +1,4 @@
 services:
-  reverse-proxy:
-    container_name: nginx
-    image: nginx
-    ports:
-      - 80:80
-    volumes:
-      - skku-table-nginx:/etc/nginx
   database:
     container_name: mysql
     image: mysql
@@ -34,5 +27,4 @@ services:
 
 
 volumes:
-  skku-table-nginx:
   skku-table-database:
