@@ -54,7 +54,7 @@ public class Booth {
   @Column(name = "updated_at", columnDefinition="TIMESTAMP")
   private LocalDateTime UpdatedAt;
 
-  public Booth(Festival festival, String name, String host, String location, String description, LocalDateTime startDateTime, LocalDateTime endDateTime, String posterImageUrl, String eventImageUrl) {
+  public Booth(Festival festival, String name, String host, String location, String description, LocalDateTime startDateTime, LocalDateTime endDateTime, int likeCount, String posterImageUrl, String eventImageUrl) {
     this.festival = festival;
     this.name = name;
     this.host = host;

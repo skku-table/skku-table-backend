@@ -29,4 +29,6 @@ public class BoothDto {
 
   private String posterImageUrl;
   private String eventImageUrl;
+
+  private int likeCount;
 }
